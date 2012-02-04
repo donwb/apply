@@ -14,7 +14,8 @@
   "dependencies": {
     "express": "latest",
     "express-messages": "latest",
-    "jade": "latest"
+    "jade": "latest",
+    "mongoose" : "latest"
   },
   "devDependencies": {},
   "scripts": {

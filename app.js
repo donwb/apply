@@ -1,6 +1,9 @@
 var express = require('express')
-
+var mongoose = require('mongoose');
 var app = module.exports = express.createServer();
+
+var ApplicationProvider = require('./ApplicationProvider').ApplicationProvider;
+var ApplicationProvider = new ApplicationProvider();
 
 // config shit
 var pub = __dirname + '/public';
@@ -32,6 +35,11 @@ app.get('/', function(req, res) {
 		}}
 	);
 });
+
+app.get('/test', function(req, res) {
+	
+});
+
 
 // ------end routes------
 
