@@ -1,0 +1,23 @@
+{
+  "author": "Don Browning <don.browning@turner.com>",
+  "name": "apply",
+  "description": "Used to apply for a job with Enterprise Applications",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EAAppFoundry/Hackathon-Site.git"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": "~0.6.5"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-messages": "latest",
+    "jade": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "app.js"
+  }
+}
