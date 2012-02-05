@@ -1,0 +1,4 @@
+curl -i -H "Accept: application/json" -X POST -d "name=klunkers, test=dingy" http://localhost:3000/app
+
+
+curl -POST 'http://localhost:3000/apply' -d '"name" : "kimchy","test" : "2009-11-15T14:12:12","message" : "trying trying"'

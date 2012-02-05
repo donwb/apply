@@ -36,8 +36,20 @@ app.get('/', function(req, res) {
 	);
 });
 
-app.get('/test', function(req, res) {
-	
+app.post('/apply', function(req, res) {
+	var rawdata = JSON.stringify(req.body);
+	var status;
+
+	ApplicationProvider.saveApp(rawdata, function (err) {
+		if(err == null) {
+			status = 'ok';
+		} else {
+			status = 'failed';
+		}
+		
+		res.contentType('json');
+		res.send(JSON.stringify({status: status}));
+	});
 });
 
 
