@@ -2,10 +2,40 @@
 html(lang="em")
     head
         title= title
+        link(href="stylesheets/bootstrap.css", rel="stylesheet")
+        style
+            body {padding-top: 60px;}
+            
+        link(href="stylesheets/bootstrap-responsive.css", rel="stylesheet")
+        link(rel="shortcut icon", href="img/favicon.ico")
+        link(rel="apple-touch-icon", sizes="72x72", href="img/apple-touch-icon-72x72.png")
+        link(rel="apple-touch-icon", href="img/apple-touch-icon.png")
+        link(rel="apple-touch-icon", sizes="114x114", href="img/apple-touch-icon-114x114.png")
+
     body
-        h3 App.ly
-        
-        div!= body
+        div(class="navbar navbar-fixed-top")
+            div.navbar-inner
+                div.container
+                    a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a(class="brand", href="#") apply.turner.com
+                    div.nav-collapse
+                        ul(class="nav")
+                            li(class="active")
+                                a(href="#") Home
+                            li
+                                a(href="#about") Developers
+                            li
+                                a(href="#contact") Designers
+
+                        
+        div.container
+
+            div!= body
 
         
-
+        script(src="javascripts/jquery.js")
+        script(src="javascripts/bootstrap.js")
+            
