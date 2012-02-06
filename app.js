@@ -40,6 +40,7 @@ app.post('/apply', function(req, res) {
 	var rawdata = JSON.stringify(req.body);
 	var status;
 
+
 	ApplicationProvider.saveApp(rawdata, function (err) {
 		if(err == null) {
 			status = 'ok';
@@ -50,8 +51,16 @@ app.post('/apply', function(req, res) {
 		res.contentType('json');
 		res.send(JSON.stringify({status: status}));
 	});
+	
 });
 
+app.get('/applypage', function(req, res) {
+	res.render('applypage.jade', {layout: true,
+		locals: {
+			title: 'Apply page'
+		}
+	});
+});
 
 // ------end routes------
 

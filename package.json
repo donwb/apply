@@ -15,7 +15,8 @@
     "express": "latest",
     "express-messages": "latest",
     "jade": "latest",
-    "mongoose" : "latest"
+    "mongoose" : "latest",
+    "jsonify" : "latest"
   },
   "devDependencies": {},
   "scripts": {

@@ -9,6 +9,7 @@ var Application = new Schema({
 	email		: String, 
 	about		: String,
 	urls		: [String],
+	req 		: String,
 	rawdata		: String
 });
 
@@ -33,10 +34,14 @@ ApplicationProvider.prototype.saveApp = function (rawdata, callback) {
 
 	var app = new Application();
 	app.rawdata = rawdata;
-	app.name = data.fname;
+	app.name = data.name;
+	app.email = data.email;
+	app.about = data.about;
+	app.req = data.req
 
 	app.save(function (err) { 
 		console.log('saved!');
+		
 		callback(err);
 	});
 };
