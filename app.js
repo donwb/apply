@@ -2,8 +2,12 @@ var express = require('express')
 var mongoose = require('mongoose');
 var app = module.exports = express.createServer();
 
+// Wire up db providers
 var ApplicationProvider = require('./ApplicationProvider').ApplicationProvider;
 var ApplicationProvider = new ApplicationProvider();
+
+var PositionProvider = require('./PositionsProvider').PositionProvider;
+var PositionProvider = new PositionProvider();
 
 // config shit
 var pub = __dirname + '/public';
@@ -29,11 +33,32 @@ app.configure('production', function(){
 //
 //-------Routes go here ----
 app.get('/', function(req, res) {
-	res.render('index.jade',{layout: true,
+
+	PositionProvider.getPositions(function(err, pos) {
+		res.render('index.jade',{layout: true,
+			locals: {
+				title: 'Apply',
+				positions: pos
+			}
+		});
+	});
+	
+});
+
+app.get('/devs', function (req, res) {
+	res.render('devs.jade', {layout: true,
 		locals: {
-			title: 'Apply'
-		}}
-	);
+			title: 'Developers'
+		}
+	});
+});
+
+app.get('/design', function (req, res) {
+	res.render('design.jade', {layout: true,
+		locals: {
+			title: 'Designers'
+		}
+	});
 });
 
 app.post('/apply', function(req, res) {
@@ -54,7 +79,7 @@ app.post('/apply', function(req, res) {
 	
 });
 
-app.get('/applypage', function(req, res) {
+app.get('/apply', function(req, res) {
 	res.render('applypage.jade', {layout: true,
 		locals: {
 			title: 'Apply page'

@@ -37,9 +37,9 @@ ApplicationProvider.prototype.saveApp = function (rawdata, callback) {
 	app.name = data.name;
 	app.email = data.email;
 	app.about = data.about;
-	app.req = data.req
+	app.req = data.req;
 
-	app.save(function (err) { 
+	app.save(function (err) {
 		console.log('saved!');
 		
 		callback(err);
@@ -47,3 +47,6 @@ ApplicationProvider.prototype.saveApp = function (rawdata, callback) {
 };
 
 exports.ApplicationProvider = ApplicationProvider;
+
+
+

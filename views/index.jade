@@ -2,14 +2,12 @@ p todo: add info about why we do this
 
 p todo: add info about how do to this 
 
-p todo: list of links valid for this type of applicaiton
+p Turner is a big place, and as such not every group uses this as a mechinism for candidate applications.  Check out the list below for qualifing positions:
 
-div achevments
-ul
-    li curl it: moves you to the top of the pile
-    li build a client - bonus points
-    li fork and improve the server - bonus++
+if positions
+    ul
+    each p in positions
+        - var t = p.title + ' ' + p.req + ' ' + p.url;
+        li= t
+br
 
-p todo: add api doc
-
-p todo: add link to github repo
