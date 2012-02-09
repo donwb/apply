@@ -1,19 +1,7 @@
 div.greeting Hi Developers!
 
 div.text So you want to move to the front of the line huh?  Well, ok. Here's how:
-div.text Send a POST to:
 
-div.code http://apply.turner.com/apply
-
-div.text set the content-type to
-span.ct application/json
-div.text and the body as valid JSON with the following keys:
-div.code
-    div.text Name: Your full name
-    div.text Email: Your email address
-    div.text Req: The Req number from the job posting on turner.com/jobs
-    div.text About: A little bit of info about you
-    div.text [Urls]: An array of urls to public profiles you want us to check out \(github, geekli.st, coderwall)
 
 h3 Achevements
 ul
@@ -23,6 +11,29 @@ ul
     li find it: There's an easter egg, find it to level up!
 
 
+div.text Send a POST to:
+
+pre http://apply.turner.com/apply
+
+div.text set the 
+  span(class=".mono") content-type 
+pre application/json
+div.text and the body as valid JSON with the following keys:
+pre
+    div.text Name: Your full name
+    div.text Email: Your email address
+    div.text Req: The Req number from the job posting on turner.com/jobs
+    div.text About: A little bit of info about you
+    div.text [Urls]: An array of urls to public profiles you want us to check out \(github, geekli.st, coderwall)
+
+
+
 p todo: add link to github repo
 
-
+script
+    $(document).ready(function() {
+       $('#home').attr('class', 'not');
+       $('#devs').attr('class', 'active');
+       $('#design').attr('class', 'not');
+        
+    });

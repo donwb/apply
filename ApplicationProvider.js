@@ -5,6 +5,7 @@ var json = require('jsonify');
 var Schema = mongoose.Schema, ObjectID = Schema.ObjectId;
 
 var Application = new Schema({
+	type		: String,
 	name		: String,
 	email		: String, 
 	about		: String,
@@ -28,7 +29,7 @@ ApplicationProvider.prototype.getApplications = function (callback){
 
 };
 
-ApplicationProvider.prototype.saveApp = function (rawdata, callback) {
+ApplicationProvider.prototype.saveApp = function (rawdata, type, callback) {
 	console.log('raw data ' + rawdata);
 	var data = json.parse(rawdata);
 
@@ -38,6 +39,7 @@ ApplicationProvider.prototype.saveApp = function (rawdata, callback) {
 	app.email = data.email;
 	app.about = data.about;
 	app.req = data.req;
+	app.type = type;
 
 	app.save(function (err) {
 		console.log('saved!');

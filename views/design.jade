@@ -1,1 +1,26 @@
 h3 Hi Designers!
+p Don't worry, you can get in on the fun also.  This site is... well, let's just say it's not winning any design awards.  Your mission, should you accept it, is to redesign this site. How do you think it should look?
+
+p Once you've redesigned it, post your design on dribbble \(or your endpoint of choice) and shoot us a link.  Just submitting a design moves you to the top of the list; if your design redefines cool then it'll say there.
+
+form(method='post', action='/apply')
+    label Name: 
+        input(type="text", name="name")
+    label Email:
+        input(type="text", name="email")
+    label Req. Number
+        input(type="text", name="req", placeholder="Starts with BR...")
+    label Link to design:
+        input(type="text", name="link")
+    label About:
+        textarea(type="text", name="about")
+        input(type="hidden", value="designer", name="type")
+
+    input(type="submit", value="Submit")  
+
+script
+    $(document).ready(function() {
+       $('#home').attr('class', 'not');
+       $('#devs').attr('class', 'not');
+       $('#design').attr('class', 'active');
+    });

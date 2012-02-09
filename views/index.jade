@@ -22,5 +22,15 @@ else
 
 br
 
-div.credit All credit for this idea goes to Parse 
-    a(href="http://www.parse.com") Parse. They do cool stuff, you should check them out.
+div.credit All credit for this idea goes to 
+    span 
+        a(href="http://www.parse.com") Parse. 
+    span They do cool stuff, you should check them out.
+
+script
+    $(document).ready(function() {
+       $('#home').attr('class', 'active');
+       $('#devs').attr('class', 'not');
+       $('#design').attr('class', 'not');
+        
+    });

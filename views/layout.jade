@@ -13,6 +13,9 @@ html(lang="em")
         link(rel="apple-touch-icon", sizes="114x114", href="img/apple-touch-icon-114x114.png")
 
     body
+        script(src="javascripts/jquery.js")
+        script(src="javascripts/bootstrap.js")
+
         div(class="navbar navbar-fixed-top")
             div.navbar-inner
                 div.container
@@ -23,11 +26,11 @@ html(lang="em")
                     a(class="brand", href="/") apply.turner.com
                     div.nav-collapse
                         ul(class="nav")
-                            li(class="active")
+                            li(class="active", id="home")
                                 a(href="/") Home
-                            li
+                            li(id="devs")
                                 a(href="/devs") Developers
-                            li
+                            li(id="design")
                                 a(href="/design") Designers
 
                         
@@ -36,6 +39,5 @@ html(lang="em")
             div!= body
 
         
-        script(src="javascripts/jquery.js")
-        script(src="javascripts/bootstrap.js")
+        
             

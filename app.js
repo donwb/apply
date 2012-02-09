@@ -62,21 +62,14 @@ app.get('/design', function (req, res) {
 });
 
 app.post('/apply', function(req, res) {
+
 	var rawdata = JSON.stringify(req.body);
-	var status;
+	var type = req.body.type == 'designer' ? 'designer' : 'dev'
 
-
-	ApplicationProvider.saveApp(rawdata, function (err) {
-		if(err == null) {
-			status = 'ok';
-		} else {
-			status = 'failed';
-		}
-		
+	Save(rawdata, type, function(err, status) {
 		res.contentType('json');
-		res.send(JSON.stringify({status: status}));
+		res.send({status : status})
 	});
-	
 });
 
 app.get('/apply', function(req, res) {
@@ -89,8 +82,23 @@ app.get('/apply', function(req, res) {
 
 // ------end routes------
 
+
+function Save(rawdata, type, callback) {
+	var status;
+
+	ApplicationProvider.saveApp(rawdata, type, function (err) {
+		status = err == null ? 'ok' : 'failed';
+		
+		callback(err, status);
+	});
+};
+
+
 var port = process.env.PORT || 3000;
 if(!module.parent){
 	app.listen(port);
 	console.log("Express server listenting on port %d",app.address().port);
 };
+
+
+
