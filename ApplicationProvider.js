@@ -11,6 +11,7 @@ var Application = new Schema({
 	about		: String,
 	urls		: [String],
 	req 		: String,
+	egg			: String, // set this to any value you want for extra credit
 	rawdata		: String
 });
 

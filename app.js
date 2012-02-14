@@ -61,6 +61,14 @@ app.get('/design', function (req, res) {
 	});
 });
 
+app.get('/job/:id', function(req, res){
+	res.render('job.jade', {layout: true,
+		locals: {
+			title: 'Job'
+		}
+	})
+});
+
 app.post('/apply', function(req, res) {
 
 	var rawdata = JSON.stringify(req.body);
