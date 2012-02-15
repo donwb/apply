@@ -2,41 +2,47 @@
 html(lang="em")
     head
         title= title
-        link(href="stylesheets/bootstrap.css", rel="stylesheet")
-        style
-            body {padding-top: 60px;}
-            
-        link(href="stylesheets/bootstrap-responsive.css", rel="stylesheet")
-        link(rel="shortcut icon", href="img/favicon.ico")
-        link(rel="apple-touch-icon", sizes="72x72", href="img/apple-touch-icon-72x72.png")
-        link(rel="apple-touch-icon", href="img/apple-touch-icon.png")
-        link(rel="apple-touch-icon", sizes="114x114", href="img/apple-touch-icon-114x114.png")
+       
+        link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700", rel="stylesheet", type="text/css")
+        link(href="stylesheets/base.css", rel="stylesheet")
+        link(href="stylesheets/layout.css", rel="stylesheet")
+        link(href="stylesheets/skeleton.css", rel="stylesheet")
+        link(href="stylesheets/site.css", rel="stylesheet")
+
+        link(rel="shortcut icon", href="images/favicon.ico")
+        link(rel="apple-touch-icon", sizes="72x72", href="images/apple-touch-icon-72x72.png")
+        link(rel="apple-touch-icon", href="images/apple-touch-icon.png")
+        link(rel="apple-touch-icon", sizes="114x114", href="images/apple-touch-icon-114x114.png")
 
     body
         script(src="javascripts/jquery.js")
-        script(src="javascripts/bootstrap.js")
+        script(src="javascripts/tabs.js")
 
-        div(class="navbar navbar-fixed-top")
-            div.navbar-inner
-                div.container
-                    a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a(class="brand", href="/") devjobs.turner.com
-                    div.nav-collapse
-                        ul(class="nav")
-                            li(class="active", id="home")
-                                a(href="/") Home
-                            li(id="devs")
-                                a(href="/devs") Developers
-                            li(id="design")
-                                a(href="/design") Designers
-
-                        
         div.container
+            div.offset-by-one
+                div.turner-text Turner
+                div.turner-subtext Broadcasting Systems, Inc.
+            div(class="sixteen columns")
+                div.offset-by-five
+                    div(class="three columns alpha")
+                        div.nav-text 
+                            a(href="/") Home
+                    div(class="three columns alpha")
+                        div.nav-text Developers
+                    div(class="three columns omega")
+                        div.nav-text Designers
+            div(class="sixteen columns")
+                div.offset-by-five
+                    div(class="three columns alpha")
+                        div.nav-subtext Find out about our jobs
+                    div(class="three columns alpha")
+                        div.nav-subtext We're looking for developers with passion
+                    div(class="three columns omega")
+                        div.nav-subtext Are you a creative type?
+                
+            div.row
 
-            div!= body
+                div!= body
 
         
         
