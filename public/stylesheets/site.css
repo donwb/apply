@@ -36,3 +36,8 @@ a, a:visited {
 	text-decoration: none;
 	color: white;
 }
+
+.footer-img {
+	width: 960px;
+	margin: 0 auto 0px auto;
+}
