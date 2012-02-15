@@ -15,11 +15,12 @@
     "express": "latest",
     "express-messages": "latest",
     "jade": "latest",
-    "mongoose" : "latest",
-    "jsonify" : "latest"
+    "mongoose": "latest",
+    "jsonify": "latest"
   },
   "devDependencies": {},
   "scripts": {
     "start": "app.js"
-  }
+  },
+  "subdomain": "apply"
 }

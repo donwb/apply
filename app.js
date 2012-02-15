@@ -1,4 +1,4 @@
-var express = require('express')
+var express = require('express');
 var mongoose = require('mongoose');
 var app = module.exports = express.createServer();
 
@@ -66,17 +66,17 @@ app.get('/job/:id', function(req, res){
 		locals: {
 			title: 'Job'
 		}
-	})
+	});
 });
 
 app.post('/apply', function(req, res) {
 
 	var rawdata = JSON.stringify(req.body);
-	var type = req.body.type == 'designer' ? 'designer' : 'dev'
+	var type = req.body.type == 'designer' ? 'designer' : 'dev';
 
 	Save(rawdata, type, function(err, status) {
 		res.contentType('json');
-		res.send({status : status})
+		res.send({status : status});
 	});
 });
 
@@ -95,18 +95,18 @@ function Save(rawdata, type, callback) {
 	var status;
 
 	ApplicationProvider.saveApp(rawdata, type, function (err) {
-		status = err == null ? 'ok' : 'failed';
+		status = err === null ? 'ok' : 'failed';
 		
 		callback(err, status);
 	});
-};
+}
 
 
 var port = process.env.PORT || 3000;
 if(!module.parent){
 	app.listen(port);
 	console.log("Express server listenting on port %d",app.address().port);
-};
+}
 
 
 
