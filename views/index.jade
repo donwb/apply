@@ -1,38 +1,37 @@
 
 div.row
     div(class="sixteen columns")
-        div(class="three columns alpha")
-            
+        div.tryptic
+            div.offset-by-two
+                div(class="four columns alpha")
+                    div.col-header Your role will shape turner
+                    div.col-text This is some text that will go under the headline.  it should be sort of long, but since this is just a test it's no big deal
+                div(class="four columns alpha")
+                    div.vertLine
+                        div.col-header Your role will shape turner
+                        div.col-text This is some text that will go under the headline.  it should be sort of long, but since this is just a test it's no big deal
+                div(class="four columns alpha")
+                    div.vertLine
+                        div.col-header Your role will shape turner
+                        div.col-text This is some text that will go under the headline.  it should be sort of long, but since this is just a test it's no big deal
+        
 
-p Want to work at Turner Broadcasting?  Want to jump to the front of the line? Then this is for you.
+div.row
+    div(class="sixteen columns")
+        div.jobs-container 
+            div.text Turner is a big place, and as such not every group uses this as a mechanism for candidate applications.  Check out the list below for qualifying positions:
 
-p Thanks for expressing interest in working at Turner Broadcasting.  The Enterprise Applications group is a progressive group of software developers who build all kinds of apps.   Small, large, desktop, mobile, web...
+            if positions
+                ul
+                each p in positions
+                    - var t = p.title + ' ' + p.req + ' ' + p.url;
+                    li= t
+            else
+                div.sorry-text Sorry, EA doesn't have any openings at this time.  Please check turner.com/jobs for positions in other area of Turner.
 
-p 
-    i We make it possible for Law and Order to air every night at 8:00pm.
+            br
 
-p Explanation:
-
-p  This is completely optional.  If you are interested in a developer or designer job at Turner, all you need to do is apply via turner.com/jobs.  If you are the kind of person who likes to code/design for fun then this is for you.
- 
-
-p Turner is a big place, and as such not every group uses this as a mechanism for candidate applications.  Check out the list below for qualifying positions:
-
-if positions
-    ul
-    each p in positions
-        - var t = p.title + ' ' + p.req + ' ' + p.url;
-        li= t
-else
-    p Sorry, EA doesn't have any openings at this time.  Please check turner.com/jobs for positions in other area of Turner.
-
-br
-
-div.credit All credit for this idea goes to 
-    span 
-        a(href="http://www.parse.com") Parse. 
-    span They do cool stuff, you should check them out.
-
+    
 script
     $(document).ready(function() {
        $('#home').attr('class', 'active');

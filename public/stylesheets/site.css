@@ -41,3 +41,35 @@ a, a:visited {
 	width: 960px;
 	margin: 0 auto 0px auto;
 }
+
+.tryptic {
+	margin-top: 10px;
+}
+
+.vertLine {
+	padding-left: 10px;
+	border-left: thin solid white;
+}
+
+.col-header {
+	font-size: 15px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.col-text {
+	font-size: 13px;
+	text-align: center;
+}
+
+.jobs-container {
+	margin-top: 10px;
+}
+.credit {
+	font-size: 8px;
+}
+
+span a {
+	font-size: 8px;
+}
