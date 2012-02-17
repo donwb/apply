@@ -5,6 +5,7 @@ var Schema = mongoose.Schema, ObjectID = Schema.ObjectId;
 
 var Position = new Schema({
     title       : String,
+    subtitle	: String,
     req         : String,
     url         : String
 });
@@ -22,4 +23,10 @@ PositionProvider.prototype.getPositions = function(callback) {
     });
 };
 
+PositionProvider.prototype.getPosition = function(reqnum, callback) {
+	Position.findOne({req: reqnum}, function(err, position) {
+		console.log(position);
+		callback(err, position);
+	});
+};
 exports.PositionProvider = PositionProvider;

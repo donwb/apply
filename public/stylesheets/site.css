@@ -73,3 +73,27 @@ a, a:visited {
 span a {
 	font-size: 8px;
 }
+
+.job-list {
+	list-style-type: none;
+}
+
+.job-list li {
+	margin: 10px 0 0 0;	
+}
+
+.job-list .job {
+	font-size: 14px;
+	font-color: white;
+	border: 1px solid white;
+	padding: 17px 21px;;
+	display: block;
+	background: #4D4947;
+}
+
+.job-list .job .title {
+	font-size: 16px;
+	font-weight: bolder;
+	font-color: white;
+
+}

@@ -61,11 +61,13 @@ app.get('/design', function (req, res) {
 	});
 });
 
-app.get('/job/:id', function(req, res){
-	res.render('job.jade', {layout: true,
-		locals: {
-			title: 'Job'
-		}
+app.get('/job/:reqnum', function(req, res){
+	PositionProvider.getPosition(req.params.reqnum, function(err, position) {
+		res.render('job.jade', {layout: true,
+			locals: {
+				title: 'Job'
+			}
+		});
 	});
 });
 
