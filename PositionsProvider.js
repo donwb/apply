@@ -7,7 +7,10 @@ var Position = new Schema({
     title       : String,
     subtitle	: String,
     req         : String,
-    url         : String
+    url         : String,
+    location    : String,
+    type        : String,
+    writeup     : String
 });
 
 mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name);

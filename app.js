@@ -65,7 +65,8 @@ app.get('/job/:reqnum', function(req, res){
 	PositionProvider.getPosition(req.params.reqnum, function(err, position) {
 		res.render('job.jade', {layout: true,
 			locals: {
-				title: 'Job'
+				title: 'Job',
+				pos: position
 			}
 		});
 	});
