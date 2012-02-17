@@ -1,11 +1,16 @@
 
 div.row
 	div.class("sixteen columns")
-		div= pos.title
-		div= pos.subtitle
-		div= pos.req
-		div= pos.location
-		div= pos.type
-		div= pos.url
+		div.offset-by-two
+			div(class="twelve columns alpha")
+				div.job-post
+					div.title= pos.title
+					div.subtitle= pos.subtitle
+					div.req= pos.req
+					div.location= pos.location
+					div.type= pos.type
+					div.url= pos.url
 
-		div= pos.writeup
+					div.writup= pos.writeup
+
+					div.apply Click here to apply

@@ -97,3 +97,16 @@ span a {
 	font-color: white;
 
 }
+
+.job-post .title {
+	font-size: 25px;
+}
+
+.job-post .subtitle {
+	font-size: 19px;
+	padding-bottom: 20px;
+}
+
+.job-post .apply {
+	margin-top: 40px;
+}
