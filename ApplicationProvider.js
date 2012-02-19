@@ -9,9 +9,13 @@ var Application = new Schema({
     name        : String,
     email       : String,
     about       : String,
-    urls        : [String],
     req         : String,
     egg         : String, // set this to any value you want for extra credit
+    geeklist    : String,
+    stackoverflow : String,
+    github      : String,
+    coderwall   : String,
+    urls        : [String],
     rawdata     : String
 });
 
@@ -41,6 +45,12 @@ ApplicationProvider.prototype.saveApp = function (rawdata, type, callback) {
     app.about = data.about;
     app.req = data.req;
     app.type = type;
+    app.egg = data.egg;
+    app.geeklist = data.geeklist;
+    app.stackoverflow = data.stackoverflow;
+    app.github = data.github;
+    app.coderwall = data.coderwall;
+    
 
     app.save(function (err) {
         console.log('saved!');

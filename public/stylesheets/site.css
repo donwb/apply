@@ -133,3 +133,7 @@ span a {
 	display: block;
 	background: #4D4947;
 }
+
+.dev-info pre .required {
+	font-weight: bolder;
+}
