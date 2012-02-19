@@ -1,40 +1,43 @@
-div.greeting Hi Developers!
 
-div.text So you want to move to the front of the line huh?  Well, ok. Here's how:
+div.row
+  div(class="sixteen columns")
+    div.offset-by-two
+      div(class="twelve columns alpha")
+        div.dev-info
+            p So you found a job you're interested in? That's great.  Most people would follow the link in the description to the Turner Jobs website, upload your resume, and wait; but you're not most people.
 
-
-h3 Achevements
-ul
-    li curl it: Moves you to the top of the pile
-    li call it: Build a client - bonus points
-    li fork it: Improve the server - bonus++
-    li find it: There's an easter egg, find it to level up!
+            p If you want to get a jump on the competition, we have a couple of excerzices for you.  The more you do, the further to the front of the line you will jump.  
 
 
-div.text Send a POST to:
-
-pre http://apply.turner.com/apply
-
-div.text set the 
-  span(class=".mono") content-type 
-pre application/json
-div.text and the body as valid JSON with the following keys:
-pre
-    div.text Name: Your full name
-    div.text Email: Your email address
-    div.text Req: The Req number from the job posting on turner.com/jobs
-    div.text About: A little bit of info about you
-    div.text [Urls]: An array of urls to public profiles you want us to check out \(github, geekli.st, coderwall)
+            div.levelup Achevements
+            ul
+                li cURL It: Invoke the api below via cURL \(or your favorite URL-invoking mechinism). Fill in as many of the parameters as you can.
+                li Call It: Rather than use cURL, build a simple client using your technology of choice.  Once you do that, throw it on github and send us a link via the api.
+                li Fork It: Like any other open source project, this can be improved. You can find the source here. Fork it, make some improvements, and send a pull request.  
+                li Find It: There's an easter egg, find it to level up!
 
 
+            div.levelup I got it!, so now how do I get started?
+            div Send a POST to:
 
-p todo: add link to github repo
+            pre http://apply.turner.com/apply
+
+            div and set the content-type to
+            pre application/json
+            
+            div.text and the body as valid JSON with the following keys:
+            pre
+                div.text Name: Your full name
+                div.text Email: Your email address
+                div.text Req: The Req number from the job posting on turner.com/jobs
+                div.text About: A little bit of info about you
+                div.text [Urls]: An array of urls to public profiles you want us to check out \(github, geekli.st, coderwall)
 
 
-div.credit All credit for this idea goes to 
-        span 
-            a(href="http://www.parse.com") Parse. 
-        span They do cool stuff, you should check them out.
+            div.credit Thanks to  
+                    span 
+                        a(href="http://www.parse.com") Parse. 
+                    span for this idea. They do cool stuff, you should check them out.
 
 
 
