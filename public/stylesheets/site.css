@@ -37,6 +37,12 @@ a, a:visited {
 	color: white;
 }
 
+.jobslink {
+	font-size: 14px;
+	color: white;
+	text-decoration: underline;
+}
+
 .footer-img {
 	width: 960px;
 	margin: 0 auto 0px auto;
@@ -70,12 +76,17 @@ a, a:visited {
 	font-size: 10px;
 }
 
+.jobs-container .ital {
+	font-style: italic;
+}
+
 span a {
 	font-size: 8px;
 }
 
 .job-list {
 	list-style-type: none;
+	margin-top: 25px;
 }
 
 .job-list li {
@@ -123,6 +134,10 @@ span a {
 	margin-left: -10px;
 }
 
+.dev-info .emph {
+	font-weight: bolder;
+};
+
 .dev-info pre {
 	font-family: monospace;
 	font-size: 14px;
@@ -136,4 +151,13 @@ span a {
 
 .dev-info pre .required {
 	font-weight: bolder;
+}
+
+.design-info input[type="text"] {
+	width: 450px;
+}
+
+.design-info textarea {
+	width: 450px;
+	height: 175px;
 }
