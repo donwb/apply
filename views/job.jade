@@ -11,6 +11,8 @@ div.row
 					div.type= pos.type
 					div.url= pos.url
 
-					div.writup= pos.writeup
+					div.writup
+						:markdown
+							pos.writeup
 
 					div.apply Click here to apply
