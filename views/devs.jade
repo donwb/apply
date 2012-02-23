@@ -6,7 +6,7 @@ div.row
         div.dev-info
             p So you found a job you're interested in? That's great.  Most people would follow the link in the description to the Turner Jobs website, upload your resume, and wait; but you're not most people.
 
-            p If you want to get a jump on the competition, we have a couple of excerzices for you.  The more you do, the further to the front of the line you will jump.  
+            p If you want to get a jump on the competition, we have a couple of exercices for you.  The more you do, the further to the front of the line you will jump.  
 
 
             div.levelup Achevements
@@ -21,16 +21,13 @@ div.row
             div Send a POST to:
 
             pre http://apply.turner.com/apply
-
-            div and set the content-type to
-            pre application/json
             
-            div.text and the body as valid JSON with the following keys \(bold means required):
+            div.text The body should be vaild JSON with the following keys:
             pre
-                div.required Name: Your full name
-                div.required Email: Your email address
-                div.required Req: The Req number from the job posting.
-                div.required About: A little bit of info about you
+                div.required Name: Your full name \(required)
+                div.required Email: Your email address \(required)
+                div.required Req: The Req number from the job posting. \(required)
+                div.required About: A little bit of info about you \(required)
                 div Geeklist: Your geekli.st profile name
                 div Stack Overflow: Your Stack Overflow profile name
                 div Github: Your Github profile name

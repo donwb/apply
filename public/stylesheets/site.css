@@ -122,6 +122,14 @@ span a {
 	margin-top: 40px;
 }
 
+.sorry-text {
+	margin: 25px 0px 10px 25px;
+	font-weight: bold;
+	font-size: 25px;
+	color: #D04F50;
+
+}
+
 .dev-info p {
 	font-size: 14px;
 }
@@ -144,7 +152,7 @@ span a {
 	font-color: white;
 	border: 1px solid white;
 	padding: 17px 21px;
-	margin-bottom: 16px;
+	margin: 10px 16px;
 	display: block;
 	background: #4D4947;
 }
