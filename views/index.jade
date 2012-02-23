@@ -22,7 +22,7 @@ div.row
             div Turner is a big place, and as such not every group uses this site to advertize thier jobs. That's their loss.  We're looking for the best developers we can find, and we hope this site <span class="ital">helps you find us.</span>
             div(style="margin-top: 12px") If one of the jobs below doesn't look like a good fit for you, please visit <a class="jobslink" href="http://www.turner.com/careers"> the main Turner Jobs site.</a> 
             
-            if positions.count > 0
+            if positions.length > 0
                 ul.job-list
                     each p in positions
                         li
@@ -31,7 +31,6 @@ div.row
                                 div.job-text= p.subtitle
             else
                 div.sorry-text Check back soon!  We're fully staffed, but that won't last forever.
-
             br
 
     

@@ -1,0 +1,22 @@
+div.row
+     div.class("sixteen columns")
+        div.offset-by-two
+            div(class="twelve columns alpha")
+                div.add-form
+                    form(method='post', action='/apply')
+                        label Title: 
+                            input(type="text", name="title")
+                        label Subtitle:
+                            input(type="text", name="subtitle")
+                        label Type:
+                            input(type="text", name="type", placeholder="developer or designer")
+                        label Req. Number
+                            input(type="text", name="req", placeholder="Starts with BR...")
+                        label City:
+                            input(type="text", name="location")
+                        label Turner Jobs URL:
+                            input(type="text", name="url")
+                        label Description
+                            textarea(type="text", name="writeup")
+
+                        input(type="submit", value="Submit")  

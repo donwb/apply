@@ -169,3 +169,12 @@ span a {
 	width: 450px;
 	height: 175px;
 }
+
+.add-form input[type="text"] {
+	width: 450px;
+}
+
+.add-form textarea {
+	width: 450px;
+	height: 175px;
+}
