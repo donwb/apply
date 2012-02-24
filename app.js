@@ -102,7 +102,7 @@ app.get('/add', function(req, res) {
 app.post('/add', function(req, res) {
 	var rawdata = req.body;
 	PositionProvider.Add(rawdata, function(err) {
-		res.send('done');
+		res.redirect('home');
 	});
 
 });
