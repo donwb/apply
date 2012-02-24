@@ -32,4 +32,22 @@ PositionProvider.prototype.getPosition = function(reqnum, callback) {
 		callback(err, position);
 	});
 };
+
+PositionProvider.prototype.Add = function(p, callback) {
+    var pos = new Position();
+
+    pos.title = p.title;
+    pos.subtitle = p.subtitle;
+    pos.req = p.req;
+    pos.url = p.url;
+    pos.location = p.location;
+    pos.type = p.type;
+    pos.writeup = p.writeup;
+    
+    pos.save(function(err){
+        callback(err);
+    });
+};
+
+
 exports.PositionProvider = PositionProvider;
