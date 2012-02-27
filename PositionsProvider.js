@@ -10,6 +10,8 @@ var Position = new Schema({
     url         : String,
     location    : String,
     type        : String,
+    internal    : Boolean,
+    division    : String,
     writeup     : String
 });
 
