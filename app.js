@@ -91,7 +91,16 @@ app.get('/apply', function(req, res) {
 	});
 });
 
-app.get('/add', function(req, res) {
+app.get('/admin', function(req, res) {
+	res.render('admin', {layout: true,
+		locals: {
+			title: 'DevJobs Admin'
+		}
+	});
+});
+
+
+app.get('/admin/add', function(req, res) {
 	res.render('add.jade', {layout: true,
 		locals: {
 			title: 'Add a job'
@@ -99,7 +108,7 @@ app.get('/add', function(req, res) {
 	});
 });
 
-app.post('/add', function(req, res) {
+app.post('/admin/add', function(req, res) {
 	var rawdata = req.body;
 	PositionProvider.Add(rawdata, function(err) {
 		res.redirect('home');
